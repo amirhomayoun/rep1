@@ -21,10 +21,6 @@ double BindingSiteClass::getX() const
     return (mCoordinate[0]);
 }
 
-double BindingSiteClass::getY() const
-{
-    return (mCoordinate[1]);
-}
 
 double BindingSiteClass::getZ() const
 {
@@ -38,7 +34,12 @@ void BindingSiteClass::setType (std::string inType)
 
 void BindingSiteClass::setCoordinates(double inX, double inY, double inZ)
 {
-    mCoordinate[0] = inX;
-    mCoordinate[1] = inY;
+    mCoordinate[0] = inX - 1;
+    mCoordinate[1] = inY + 4;
     mCoordinate[2] = inZ;
+}
+
+void BindingSiteClass::newFunction(double inX, double inY, double inZ)
+{
+
 }
